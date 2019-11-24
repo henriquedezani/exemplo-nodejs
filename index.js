@@ -6,4 +6,10 @@ app.get('/', function(req, res) {
     res.send("Hello World");
 });
 
-app.listen(process.env.PORT);
+app.get('/teste', function(req, res) {
+    res.send(`Hello World ${req.query.nome}`);
+});
+
+
+const server = app.listen(3000);
+console.log(`Servidor executando na porta ${server.PORT}`);
