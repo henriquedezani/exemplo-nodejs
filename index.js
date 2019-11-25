@@ -7,9 +7,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/teste', function(req, res) {
-    res.send(`Hello World ${req.query.nome}`);
+    res.send(`Hello World ${req.query.nome}`); 
 });
 
 
-const server = app.listen(3000);
+const server = app.listen(process.env.PORT || 3000);
 console.log(`Servidor executando na porta ${server.PORT}`);
